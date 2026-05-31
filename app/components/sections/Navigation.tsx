@@ -14,7 +14,7 @@ export default function Navigation() {
 
             <Hamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 
-            <nav className={`site-navigation fixed top-0 right-0 h-screen w-screen flex flex-col gap-10 items-center justify-center backdrop-blur-sm z-40 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
+            <nav className={`site-navigation fixed top-0 right-0 h-screen w-screen flex flex-col gap-10 items-center justify-center backdrop-blur-lg z-40 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
                 <Link href="#home">Home</Link>
                 <Link href="#over-mij">Over mij</Link>
                 <Link href="#projecten">Projecten</Link>

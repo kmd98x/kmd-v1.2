@@ -23,7 +23,6 @@ export default function Header() {
                 end: "bottom center",
                 pin: '.hero-pin',
                 scrub: true,
-                markers: true,
             },
         })
     }, {scope: container})
