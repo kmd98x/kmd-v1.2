@@ -28,7 +28,11 @@ export default function Header() {
     }, {scope: container})
 
     return (
-        <section ref={container} className='h-screen w-screen'>
+        <section
+            ref={container}
+            data-scroll-section="hero"
+            className="relative z-20 h-screen w-screen"
+        >
             <div className="hero-pin h-screen w-screen flex items-center justify-center">
                 <Image src="/hero-image.svg" className="hero-image" ref={imageRef} alt="Header" width={1000} height={1000} />
             </div>
