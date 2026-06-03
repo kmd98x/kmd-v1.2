@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -24,16 +24,27 @@ export default function Projects() {
 
     const handleSlideChange = (swiper: SwiperInstance) => {
         setCurrentSlide(swiper.realIndex);
-    }
+    };
 
+    const handleSwiperInit = (swiper: SwiperInstance) => {
+        swiper.slideToLoop(initialSlide, 0);
+        handleSlideChange(swiper);
+    };
 
-    const handleCursorPosition = (swiper: SwiperInstance) => {
-        const cursor = document.querySelector('.project-cursor') as HTMLElement | null;
-        if (cursor) {
-            cursor.style.left = `${swiper.translate}px`;
-            cursor.style.top = `${swiper.translate}px`;
-        }
-    }
+    useEffect(() => {
+        const slides = section.current?.querySelectorAll(".projects-swiper .swiper-slide");
+        if (!slides) return;
+
+        slides.forEach((slideEl) => {
+            const index = Number(slideEl.getAttribute("data-swiper-slide-index"));
+            const overlay = slideEl.querySelector<HTMLElement>(".slide-dim");
+            if (!overlay || Number.isNaN(index)) return;
+
+            const isActive = index === currentSlide;
+            overlay.classList.toggle("opacity-0", isActive);
+            overlay.classList.toggle("opacity-100", !isActive);
+        });
+    }, [currentSlide]);
 
     useGSAP(() => {
         gsap.fromTo(".section-title", {
@@ -97,15 +108,21 @@ export default function Projects() {
                 </div>
             ))}
 
+            <span className="project-cursor pointer-events-none absolute z-20 flex h-32 w-32 items-center justify-center rounded-full bg-black/50 text-white">
+                Bekijk project
+            </span>
+
             <Swiper
+                className="projects-swiper w-full"
                 effect="coverflow"
-                initialSlide={initialSlide}
-                loopAdditionalSlides={2}
-                watchSlidesProgress={true}
-                centeredSlides={true}
+                loop
+                loopAdditionalSlides={3}
+                watchSlidesProgress
+                centeredSlides
                 slidesPerView="auto"
-                grabCursor={true}
-                onSwiper={handleSlideChange}
+                grabCursor
+                onSwiper={handleSwiperInit}
+                onSlideChange={handleSlideChange}
                 onSlideChangeTransitionEnd={handleSlideChange}
                 modules={[EffectCoverflow]}
                 coverflowEffect={{
@@ -116,11 +133,21 @@ export default function Projects() {
                     slideShadows: false,
                 }}
             >
-                <span className="project-cursor absolute w-32 h-32 bg-black/50 rounded-full flex items-center justify-center text-white">Bekijk project</span>
                 {projectsData.map((project, index) => (
-                    <SwiperSlide key={project.title} className="relative mt-48 max-w-[412px]">
-                        <div className={`absolute top-0 left-0 w-full h-full bg-black/50 ${currentSlide !== index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out`}></div>
-                        <Image src={project.image} alt={project.title} width={1000} height={1000} className="w-auto h-auto" />
+                    <SwiperSlide key={project.title} className="relative mt-48 !w-[412px] shrink-0">
+                        <div className="relative">
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                width={1000}
+                                height={1000}
+                                className="relative z-0 h-auto w-auto"
+                            />
+                            <div
+                                className={`slide-dim pointer-events-none absolute inset-0 z-10 bg-black/50 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? "opacity-0" : "opacity-100"}`}
+                                aria-hidden
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
