@@ -73,14 +73,14 @@ export default function Projects() {
 
             <Slider>
                 {projectsData.map((project, index) => (
-                    <Slide key={index}>
+                    <div key={index}>
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                             <h3 className="project-title font-alegreya-sans text-4xl text-center">{project.title}</h3>
                             <p className="project-excerpt font-alegreya-sans text-center max-w-[60ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.75rem)]">{project.excerpt}</p>
                         </div>
 
                         <Image src={project.image} alt={project.title} width={1000} height={1000} className="w-auto h-auto" />
-                    </Slide>
+                    </div>
                 ))}
             </Slider>
         </section>
