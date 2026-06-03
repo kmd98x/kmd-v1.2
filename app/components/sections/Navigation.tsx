@@ -9,8 +9,8 @@ export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="flex items-center justify-between fixed w-full p-8 left-1/2 -translate-x-1/2 z-50">
-            <Link href="/" className="inline-block z-50"><Logo /></Link>
+        <header className="flex items-center justify-end fixed w-full p-8 left-1/2 -translate-x-1/2 z-50">
+            {/* <Link href="/" className="inline-block z-50"><Logo /></Link> */}
 
             <Hamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 
