@@ -4,11 +4,14 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
-
+import projectsData from "@/data/projects.json";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 import Title from "../global/Title";
+import Slide from "../global/slider/Slide";
+import Slider from "../global/slider/Slider";
+import Image from "next/image";
 
 export default function Projects() {
     const section = useRef<HTMLDivElement>(null);
@@ -37,8 +40,7 @@ export default function Projects() {
                 return gsap.from(self.chars, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-60% top",
-                        markers: true,
+                        start: "-55% top",
                     },
                     y: 50,
                     duration: 1,
@@ -55,8 +57,7 @@ export default function Projects() {
                 return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-60% top",
-                        markers: true,
+                        start: "-50% top",
                     },
                     y: 50,
                     duration: .15,
@@ -67,10 +68,21 @@ export default function Projects() {
     }, { scope: section });
 
     return (
-        <section ref={section} className='h-screen w-screen'>
-            <Title className="section-title">Mijn projecten</Title>
-            <h3 className="project-title font-alegreya-sans text-4xl text-center">EU Tribe</h3>
-            <p className="project-excerpt font-alegreya-sans text-lg text-center max-w-[60ch] mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem ex maxime quidem distinctio excepturi, ratione quas! Tenetur sequi suscipit, dolore, dolorem alias animi nesciunt magnam molestias ut aliquam, sunt ducimus!</p>
+        <section ref={section} className='h-screen w-screen relative'>
+            <Title className="section-title absolute top-0 left-0 mt-[-16vh]">Mijn projecten</Title>
+
+            <Slider>
+                {projectsData.map((project, index) => (
+                    <Slide key={index}>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <h3 className="project-title font-alegreya-sans text-4xl text-center">{project.title}</h3>
+                            <p className="project-excerpt font-alegreya-sans text-center max-w-[60ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.75rem)]">{project.excerpt}</p>
+                        </div>
+
+                        <Image src={project.image} alt={project.title} width={1000} height={1000} className="w-auto h-auto" />
+                    </Slide>
+                ))}
+            </Slider>
         </section>
     )
 }

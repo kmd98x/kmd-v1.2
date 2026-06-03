@@ -16,7 +16,8 @@ export default function Header() {
         gsap.to('.hero-image', {
             opacity: 0,
             duration: 1,
-            scale: 1.1,
+            ease: "power2.out",
+            scale: 1.15,
             scrollTrigger: {
                 trigger: container.current,
                 start: "top top",
