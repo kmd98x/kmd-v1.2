@@ -1,5 +1,25 @@
 [
     {
+        "image": "/projects/jaar2capibara.svg",
+        "title": "Capibara",
+        "excerpt": "Capibara is a company that is located in the Netherlands.",
+        "content": [
+            {"type": "title", "value": "Capibara"},
+            {"type": "text", "value": "Capibara is a company that is located in the Netherlands."},
+            {"type": "image", "url": "/projects/jaar2capibara.svg"}
+        ]
+    },
+    {
+        "image": "/projects/jaar1eu-tribe.svg",
+        "title": "EU Tribe",
+        "excerpt": "EU Tribe is a community of people who are passionate about the environment and sustainability.",
+        "content": [
+            {"type": "title", "value": "EU Tribe"},
+            {"type": "text", "value": "EU Tribe is a community of people who are passionate about the environment and sustainability."},
+            {"type": "image", "url": "/projects/jaar1eu-tribe.svg"}
+        ]
+    },
+    {
         "image": "/projects/jaar3minorKoffie.svg",
         "title": "The Morning Brew",
         "excerpt": "The Morning Brew is a daily newsletter that is delivered to your inbox every morning.",
@@ -27,26 +47,6 @@
             {"type": "title", "value": "Gemeente Rotterdam"},
             {"type": "text", "value": "Gemeente Rotterdam is a city that is located in the Netherlands."},
             {"type": "image", "url": "/projects/jaar2gemeente-rotterdam.svg"}
-        ]
-    },
-    {
-        "image": "/projects/jaar2capibara.svg",
-        "title": "Capibara",
-        "excerpt": "Capibara is a company that is located in the Netherlands.",
-        "content": [
-            {"type": "title", "value": "Capibara"},
-            {"type": "text", "value": "Capibara is a company that is located in the Netherlands."},
-            {"type": "image", "url": "/projects/jaar2capibara.svg"}
-        ]
-    },
-    {
-        "image": "/projects/jaar1eu-tribe.svg",
-        "title": "EU Tribe",
-        "excerpt": "EU Tribe is a community of people who are passionate about the environment and sustainability.",
-        "content": [
-            {"type": "title", "value": "EU Tribe"},
-            {"type": "text", "value": "EU Tribe is a community of people who are passionate about the environment and sustainability."},
-            {"type": "image", "url": "/projects/jaar1eu-tribe.svg"}
         ]
     }
 ]
