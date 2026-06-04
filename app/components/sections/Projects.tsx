@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -26,25 +26,22 @@ export default function Projects() {
         setCurrentSlide(swiper.realIndex);
     };
 
-    const handleSwiperInit = (swiper: SwiperInstance) => {
-        swiper.slideToLoop(initialSlide, 0);
-        handleSlideChange(swiper);
+    const syncSlideOverlays = (swiper: SwiperInstance) => {
+        swiper.slides.forEach((slideEl) => {
+            const overlay = slideEl.querySelector<HTMLElement>(".slide-dim");
+            if (!overlay) return;
+
+            const progress = (slideEl as HTMLElement & { progress?: number }).progress ?? 1;
+            const isCentered = Math.abs(progress) < 0.15;
+            overlay.classList.toggle("opacity-0", isCentered);
+            overlay.classList.toggle("opacity-100", !isCentered);
+        });
     };
 
-    useEffect(() => {
-        const slides = section.current?.querySelectorAll(".projects-swiper .swiper-slide");
-        if (!slides) return;
-
-        slides.forEach((slideEl) => {
-            const index = Number(slideEl.getAttribute("data-swiper-slide-index"));
-            const overlay = slideEl.querySelector<HTMLElement>(".slide-dim");
-            if (!overlay || Number.isNaN(index)) return;
-
-            const isActive = index === currentSlide;
-            overlay.classList.toggle("opacity-0", isActive);
-            overlay.classList.toggle("opacity-100", !isActive);
-        });
-    }, [currentSlide]);
+    const handleSwiperReady = (swiper: SwiperInstance) => {
+        handleSlideChange(swiper);
+        syncSlideOverlays(swiper);
+    };
 
     useGSAP(() => {
         gsap.fromTo(".section-title", {
@@ -113,17 +110,24 @@ export default function Projects() {
             </span>
 
             <Swiper
-                className="projects-swiper w-full"
+                className="projects-swiper w-full overflow-hidden"
                 effect="coverflow"
-                loop
-                loopAdditionalSlides={3}
-                watchSlidesProgress
                 centeredSlides
                 slidesPerView="auto"
+                watchSlidesProgress
                 grabCursor
-                onSwiper={handleSwiperInit}
-                onSlideChange={handleSlideChange}
-                onSlideChangeTransitionEnd={handleSlideChange}
+                initialSlide={initialSlide}
+                onSwiper={handleSwiperReady}
+                onProgress={syncSlideOverlays}
+                onSlideChange={(swiper) => {
+                    handleSlideChange(swiper);
+                    syncSlideOverlays(swiper);
+                }}
+                onSlideChangeTransitionEnd={(swiper) => {
+                    handleSlideChange(swiper);
+                    syncSlideOverlays(swiper);
+                }}
+                freeMode
                 modules={[EffectCoverflow]}
                 coverflowEffect={{
                     rotate: 0,
@@ -133,7 +137,7 @@ export default function Projects() {
                     slideShadows: false,
                 }}
             >
-                {projectsData.map((project, index) => (
+                {projectsData.map((project) => (
                     <SwiperSlide key={project.title} className="relative mt-48 !w-[412px] shrink-0">
                         <div className="relative">
                             <Image
@@ -144,7 +148,7 @@ export default function Projects() {
                                 className="relative z-0 h-auto w-auto"
                             />
                             <div
-                                className={`slide-dim pointer-events-none absolute inset-0 z-10 bg-black/50 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? "opacity-0" : "opacity-100"}`}
+                                className="slide-dim pointer-events-none absolute inset-0 z-10 bg-black/50 opacity-100 transition-opacity duration-1000 ease-in-out"
                                 aria-hidden
                             />
                         </div>
