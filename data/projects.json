@@ -1,52 +1,197 @@
 [
     {
+        "title": "Capibara Rush",
         "image": "/projects/jaar2capibara.svg",
-        "title": "Capibara",
-        "excerpt": "Capibara is a company that is located in the Netherlands.",
-        "content": [
-            {"type": "title", "value": "Capibara"},
-            {"type": "text", "value": "Capibara is a company that is located in the Netherlands."},
-            {"type": "image", "url": "/projects/jaar2capibara.svg"}
+        "excerpt": "Een tastbaar bordspel dat kinderen onder de 10 spelenderwijs leert tellen van 1 tot en met 22  en ze ondertussen leuke weetjes over capibara's laat ontdekken.",
+        "tags": [
+            "Jaar 1",
+            "Makerslab",
+            "Figma",
+            "Individueel"
+        ],
+        "heroMedia": {
+            "type": "image",
+            "url": "/projects/capibara-rush/capibara-bordspel.png",
+            "caption": "Capibara is a company that is located in the Netherlands."
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Voor Project Interactie ontwierp ik een fysieke, interactieve toepassing. Ik koos bewust voor een haptisch spel zonder scherm, omdat ik wilde onderzoeken hoe tastbare interactie kan bijdragen aan het leerproces van jonge kinderen. Mijn persoonlijke leerdoel lag bij Prototyperen en Uitwerken. Mijn design challenge luidt als volgt:"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Mijn design challenge luidt als volgt:"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "\"Hoe kunnen we een bordspel ontwerpen waarmee jonge kinderen spelenderwijs leren tellen van 1 tot en met 22 en tegelijk leuke weetjes over capibara's ontdekken?\""
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Ik ontwierp voor jonge kinderen die leren tellen. Zij leren het best door te doen, aanraken, bewegen en spelen . Kinderen  raken snel afgeleid door schermen. Ze hebben behoefte aan duidelijke, herkenbare getallen en een eenvoudige, speelse opzet die niet te ingewikkeld is."
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Ontwerpkeuze: Een tastbaar spel met genummerde vakken, grote heldere vormen en een vrolijke, natuurlijke sfeer die past bij het capibara-thema en uitnodigt om te blijven spelen."
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-2 col-span-10 mb-6",
+                        "type": "text",
+                        "value": "Capibara Rush is een fysiek, haptisch bordspel waarmee kinderen spelenderwijs leren tellen. De vakken zijn genummerd van 1 tot en met 22, zodat spelers tijdens het bewegen van hun pion vanzelf tellen en zien waar ze staan. Onderweg pakken ze kaarten met weetjes over capibara's, waardoor leren en spelen samenkomen. Door bewust te kiezen voor een tastbaar spel zonder scherm, met onder andere een pop-o-matic dobbelsteen, blijft de interactie volledig fysiek en toegankelijk voor kleine handen. Voor het maken van het spel werkte ik in het MakersLab, waar ik de onderdelen met de laser cutter heb gesneden en gegraveerd."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/makerslab-bord-uitsnijden.png"
+                    }
+                ]
+            },
+            {
+                "title": "Iteraties",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-1 col-span-12 text-center",
+                        "type": "text",
+                        "value": "Omdat mijn leerdoel bij prototypen lag, maakte ik meerdere versies. Elke iteratie paste ik aan op basis van eigen inzichten en feedback. Zo werd het spel telkens beter."
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-1 col-span-12 text-center mb-6",
+                        "type": "text",
+                        "value": "Ik begon met karton en symmetrische, rechte vakjes om de werking van het spel te testen."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-1.png"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-1 col-span-12 text-center mt-6",
+                        "type": "text",
+                        "value": "Op basis van feedback en testen verfijnde ik de spelregels en de leesbaarheid van de getallen."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-2.png"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1.5rem)] col-start-1 col-span-12 text-center mt-6",
+                        "type": "title",
+                        "value": "Eindversie"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-1 col-span-12 text-center",
+                        "type": "text",
+                        "value": "Ik stapte over op de lasercutter en hout, en koos voor een organische indeling van de vakken, zodat de speler het gevoel krijgt in de natuur te zijn."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-3.png"
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8 text-center mb-6",
+                        "type": "text",
+                        "value": "Capibara Rush is een fysiek bordspel van duurzaam hout met stevige plastic pionnen. De vakken zijn genummerd van 1 tot en met 22, zodat kinderen tijdens het spelen zien waar ze staan en spelenderwijs leren tellen. Onderweg pakken spelers kaarten met weetjes over capibara's. Als laatste stap gaf ik het eindproduct een persoonlijke touch door het zelf te verven en af te werken, zodat het spel kleurrijker en aantrekkelijker werd voor kinderen."
+                    },
+                    {
+                        "styles": "col-start-2 col-span-10",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/resultaat-foto-1.png"
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-3 col-span-8 text-center mt-6",
+                        "type": "text",
+                        "value": "Omdat het spel haptisch is en geen scherm gebruikt, voegde ik een knop met pop-o-matic-effect toe: één druk en de dobbelsteen rolt vanzelf. Zo blijft de interactie volledig tastbaar en is het voor kleine handen makkelijk te bedienen."
+                    },
+                    {
+                        "styles": "col-start-2 col-span-10",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/resultaat-foto-2.png"
+                    }
+                ]
+            }
         ]
     },
     {
+        "title": "Eu Tribes",
         "image": "/projects/jaar1eu-tribe.svg",
-        "title": "EU Tribe",
-        "excerpt": "EU Tribe is a community of people who are passionate about the environment and sustainability.",
-        "content": [
-            {"type": "title", "value": "EU Tribe"},
-            {"type": "text", "value": "EU Tribe is a community of people who are passionate about the environment and sustainability."},
-            {"type": "image", "url": "/projects/jaar1eu-tribe.svg"}
-        ]
-    },
-    {
-        "image": "/projects/jaar3minorKoffie.svg",
-        "title": "The Morning Brew",
-        "excerpt": "The Morning Brew is a daily newsletter that is delivered to your inbox every morning.",
-        "content": [
-            {"type": "title", "value": "The Morning Brew"},
-            {"type": "text", "value": "The Morning Brew is a daily newsletter that is delivered to your inbox every morning."},
-            {"type": "image", "url": "/projects/jaar3minorKoffie.svg"}
-        ]
-    },
-    {
-        "image": "/projects/jaar3minor.svg",
-        "title": "Het omnient model",
-        "excerpt": "Het omnient magazine is a monthly magazine that is delivered to your inbox every month.",
-        "content": [
-            {"type": "title", "value": "Het omnient magazine"},
-            {"type": "text", "value": "Het omnient magazine is a monthly magazine that is delivered to your inbox every month."},
-            {"type": "image", "url": "/projects/jaar3minor.svg"}
-        ]
-    },
-    {
-        "image": "/projects/jaar2gemeente-rotterdam.svg",
-        "title": "Gemeente Rotterdam",
-        "excerpt": "Gemeente Rotterdam is a city that is located in the Netherlands.",
-        "content": [
-            {"type": "title", "value": "Gemeente Rotterdam"},
-            {"type": "text", "value": "Gemeente Rotterdam is a city that is located in the Netherlands."},
-            {"type": "image", "url": "/projects/jaar2gemeente-rotterdam.svg"}
+        "excerpt": "Een interactieve app die reizende CMD-studenten met elkaar verbindt om samen Europa te ontdekken, tips te delen en een reisbuddy te vinden.",
+        "tags": [
+            "Jaar 1",
+            "Figma",
+            "Duo-project"
+        ],
+        "heroMedia": {
+            "type": "video",
+            "url": "/projects/videos/eutribe.mp4",
+            "caption": "1e concept video van Eu Tribes"
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-2 col-span-4",
+                        "type": "text",
+                        "value": "Voor mijn minor Visual Interface Design in jaar 3 ontwierp ik een digitale ervaring voor The Golden Roast. De opdracht draaide om kleur en compositie: de luxe van een fysieke koffie boutique vertalen naar een lichte landingspagina die verkoopt en een donker dashboard dat de klant begeleidt . Twee schermen met dezelfde identiteit, in tegengestelde modi."
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-2 col-span-4",
+                        "type": "text",
+                        "value": "Ik ontwierp voor jonge kinderen die leren tellen. Zij leren het best door te doen, aanraken, bewegen en spelen . Kinderen  raken snel afgeleid door schermen. Ze hebben behoefte aan duidelijke, herkenbare getallen en een eenvoudige, speelse opzet die niet te ingewikkeld is."
+                    },
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-2 col-span-4",
+                        "type": "text",
+                        "value": "Ontwerpkeuze: Een tastbaar spel met genummerde vakken, grote heldere vormen en een vrolijke, natuurlijke sfeer die past bij het capibara-thema en uitnodigt om te blijven spelen."
+                    }
+                ]
+            },
+            {
+                "title": "Oplossing",
+                "content": [
+                    {
+                        "styles": "text-center text-[clamp(1rem,1.5vw+1rem,1rem)] col-start-2 col-span-4",
+                        "type": "text",
+                        "value": ""
+                    },
+                    {
+                        "styles": "col-start-2 col-span-4",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/capibara-bordspel.png"
+                    }
+                ]
+            }
         ]
     }
 ]
