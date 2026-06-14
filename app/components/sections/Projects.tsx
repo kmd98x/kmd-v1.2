@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import projectsData from "@/data/projects.json";
-import {Swiper as SwiperType} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { EffectCoverflow } from "swiper/modules";
@@ -65,11 +64,7 @@ export default function Projects() {
         syncSlideOverlays(swiper);
     };
 
-    const handleProjectSlideClick = (index: number, project: Project) => {
-        if (index !== currentSlide) {
-            swiperRef.current?.slideTo(index);
-            return;
-        }
+    const handleProjectSlideClick = (project: Project) => {
         setSelectedProject(project);
         setIsModalOpen(true);
     };
@@ -145,7 +140,7 @@ export default function Projects() {
 
     return (
         <section ref={section} className='h-[90vh] w-screen relative' id="projecten">
-            <div 
+            <div
                 className={`fixed top-0 left-0 w-full h-full bg-black/90 z-50 transition-opacity duration-700 ease-in-out ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsModalOpen(false)}
             ></div>
@@ -208,7 +203,9 @@ export default function Projects() {
                     <SwiperSlide
                         key={project.title}
                         className="relative mt-50 w-[412px]! shrink-0"
-                        onClick={() => handleProjectSlideClick(index, project as Project)}>
+
+                        onClick={() => handleProjectSlideClick(index, project as Project)}
+                    >
                         <div className="relative">
                             <Image
                                 src={project.image}
@@ -219,7 +216,7 @@ export default function Projects() {
                             />
                             <div
                                 className="slide-dim pointer-events-none absolute inset-0 z-10 bg-black/50 opacity-100 transition-opacity duration-1000 ease-in-out"
-                                aria-hidden
+                                aria-hidden="true"
                             />
                         </div>
                     </SwiperSlide>
