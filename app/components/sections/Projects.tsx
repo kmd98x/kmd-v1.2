@@ -199,12 +199,12 @@ export default function Projects() {
                     slideShadows: false,
                 }}
             >
-                {projectsData.map((project, index) => (
+                {projectsData.map((project) => (
                     <SwiperSlide
                         key={project.title}
                         className="relative mt-50 w-[412px]! shrink-0"
 
-                        onClick={() => handleProjectSlideClick(index, project as Project)}
+                        onClick={() => handleProjectSlideClick(project as Project)}
                     >
                         <div className="relative">
                             <Image
