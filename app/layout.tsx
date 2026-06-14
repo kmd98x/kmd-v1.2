@@ -3,6 +3,7 @@ import { Alegreya_Sans, Alegreya_Sans_SC, Montez } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/sections/Navigation";
 import Cursor from "./components/global/Cursor";
+import LightboxProvider from "./providers/LightboxProvider";
 
 const AlegreyaSans = Alegreya_Sans({
 	subsets: ["latin"],
@@ -39,7 +40,8 @@ export default function RootLayout({
 		>
 			<body className="min-h-full flex flex-col">
 				<Navigation />
-				<Cursor />
+				{/* <Cursor /> */}
+				<LightboxProvider />
 				{children}
 			</body>
 		</html>

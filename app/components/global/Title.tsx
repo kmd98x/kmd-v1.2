@@ -4,7 +4,7 @@ export default function Title({ children, className }: { children: React.ReactNo
     return (
         <h2
             className={twMerge(
-                "inline-block w-full text-center font-montez text-[15rem] text-secondary",
+                "inline-block w-full text-center font-montez text-[clamp(2.5rem,18vw+0.5rem,15rem)] text-secondary",
                 className
             )}
         >

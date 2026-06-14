@@ -1,5 +1,7 @@
 import { Project } from "@/types/project";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import RichText from "./global/RichText";
 
 interface ProjectDetailsModalProps {
     project: Project;
@@ -15,14 +17,14 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
 
             <div className="flex flex-wrap gap-4 justify-center mt-10">
                 {project.tags.map((tag) => (
-                    <span key={tag} className="font-alegreya-sans text-sm bg-[#231F1C]/50 px-4 py-2 rounded-full">{tag}</span>
+                    <span key={tag} className="font-alegreya-sans text-sm bg-[#231F1C]/50 px-4 py-2 rounded-lg">{tag}</span>
                 ))}
             </div>
 
             <div className="relative">
                 <span className="absolute bottom-0 blur-2xl rounded-full w-full h-10 "></span>
                 {project.heroMedia.type === "image" && (
-                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} className="w-full h-auto mt-10" />
+                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} loading="eager" className="w-full h-auto mt-10" />
                 )}
                 {project.heroMedia.type === "video" && (
                     <video src={project.heroMedia.url} controls className="w-full h-auto mt-10" />
@@ -30,12 +32,12 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
             </div>
 
             <div className="mt-10 bg-linear-to-br from-[#231F1C]/50 to-[#231F1C]/0 via-[#000000]/20 border border-[#231F1C]/50 border-b-0 rounded-tr-3xl rounded-tl-3xl p-10">
-                <div className="flex flex-wrap justify-center items-center gap-10 p-4 border-b border-[#231F1C]/50">
+                <div className="flex max-md:overflow-x-auto md:justify-center items-center gap-10 p-4 border-b border-[#231F1C]/50">
                     {project.tabs.map((tab) => (
                         <h4
                             key={tab.title}
-                            className={`font-alegreya-sans text-2xl 
-                                ${activeTab === tab.title ? 'bg-black/75 rounded-lg px-8 py-3' : ''} cursor-pointer`}
+                            className={`font-alegreya-sans text-2xl whitespace-nowrap
+                                ${activeTab === tab.title ? 'rounded-lg px-8 py-3 bg-[#231F1C]' : ''} cursor-pointer`}
                             onClick={() => setActiveTab(tab.title)}
                         >{tab.title}</h4>
                     ))}
@@ -47,12 +49,54 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                             case "title":
                             case "subtitle":
                             case "text":
-                                return <p key={index} className={content.styles}>{content.value}</p>;
+                                return (
+                                    <RichText key={index} text={content.value} className={twMerge("col-start-2 col-span-10 whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1rem)]", content?.styles || "")} />
+                                );
                             case "image":
-                                return <img key={index} src={content.url} alt="" className={content.styles} />;
-
+                                return (
+                                    <img key={index} src={content.url} alt="" loading="eager" className={twMerge("col-start-2 col-span-10", content?.styles || "")} />
+                                );
+                            case "gallery":
+                                return (
+                                    <div key={index} className={twMerge("grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 col-start-1 col-span-12", content?.styles || "")}>
+                                        {content.images.map((image, imageIndex) => (
+                                            <a
+                                                key={imageIndex}
+                                                href={image}
+                                                data-lightbox={content.lightboxTag ?? ""}
+                                            >
+                                                <img src={image} alt="" loading="eager" className="w-full h-auto" />
+                                            </a>
+                                        ))}
+                                    </div>
+                                );
                             case "video":
-                                return <video key={index} src={content.url} controls className={content.styles} />;
+                                return (
+                                    <video key={index} src={content.url} controls className={twMerge("col-start-2 col-span-10", content?.styles || "")} />
+                                );
+
+                            case "title-text":
+                                return (
+                                    <div key={index} className={twMerge("border border-[#231F1C] bg-[#231F1C]/15 rounded-lg p-4", content?.blockStyles || "")}>
+                                        <h5 className={twMerge("font-alegreya-sans text-2xl font-bold", content?.titleStyles || "")}>{content.title}</h5>
+                                        <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1rem)]", content?.textStyles || "")} />
+                                        {content.media && (
+                                            <div className={twMerge("mt-4", content.media.styles || "")}>
+                                                {content.media.type === "image" && (
+                                                    <img src={content.media.url} alt="" loading="eager" className="w-full h-auto" />
+                                                )}
+
+                                                {content.media.type === "video" && (
+                                                    <video src={content.media.url} controls className="w-full h-auto" />
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            case "link":
+                                return (
+                                    <a key={index} href={content.url} target={content.target} rel={content.rel} className={twMerge("underline col-start-2 col-span-10", content?.styles || "")}>{content.text}</a>
+                                );
 
                             default:
                                 const _exhaustive: never = content;

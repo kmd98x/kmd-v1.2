@@ -23,7 +23,7 @@ export default function Footer() {
 
     return (
         <footer className="relative py-24">
-            <div className="w-[1102px] h-[812px] absolute top-0 right-0">
+            <div className="w-[902px] h-[632px] absolute top-0 right-0">
                 <Image src="/footer-foto.png" alt="Logo" width={1102} height={812} className="w-full h-full object-cover" />
             </div>
 

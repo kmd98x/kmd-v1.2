@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import projectsData from "@/data/projects.json";
+import {Swiper as SwiperType} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { EffectCoverflow } from "swiper/modules";
@@ -18,11 +19,13 @@ import Title from "../global/Title";
 import Image from "next/image";
 import { Project } from "@/types/project";
 import ProjectDetailsModal from "../ProjectDetailsModal";
+import Close from "../icons/Close";
 
 
 export default function Projects() {
     const section = useRef<HTMLDivElement>(null);
     const modalRef = useRef<HTMLDivElement>(null);
+    const swiperRef = useRef<SwiperInstance | null>(null);
 
     const initialSlide = 2;
     const [currentSlide, setCurrentSlide] = useState(initialSlide);
@@ -56,8 +59,19 @@ export default function Projects() {
     };
 
     const handleSwiperReady = (swiper: SwiperInstance) => {
+        swiperRef.current = swiper;
+
         handleSlideChange(swiper);
         syncSlideOverlays(swiper);
+    };
+
+    const handleProjectSlideClick = (index: number, project: Project) => {
+        if (index !== currentSlide) {
+            swiperRef.current?.slideTo(index);
+            return;
+        }
+        setSelectedProject(project);
+        setIsModalOpen(true);
     };
 
     useGSAP(() => {
@@ -65,7 +79,7 @@ export default function Projects() {
             opacity: 0,
             y: -30,
         }, {
-            opacity: 0.4,
+            opacity: 0.5,
             y: 0,
             ease: "none",
             scrollTrigger: {
@@ -119,7 +133,7 @@ export default function Projects() {
             ></div>
 
             <div
-                className={`fixed h-[calc(100vh-80px)] w-screen bg-[#101010] overflow-y-auto z-50 transition-all duration-700 ease-in-out outline-0 ${isModalOpen ? 'top-20' : 'top-full'}`}
+                className={`fixed h-[calc(100vh-80px)] w-screen bg-[#0C0C0C] overflow-y-auto z-50 transition-all duration-700 ease-in-out outline-0 ${isModalOpen ? 'top-20' : 'top-full'}`}
                 ref={modalRef}
                 tabIndex={-1}
                 onKeyDown={(e) => {
@@ -128,8 +142,8 @@ export default function Projects() {
                     }
                 }}
             >
-                <button className="absolute top-4 right-4 m-4 z-50 w-16 h-16 rounded-full border border-foreground cursor-pointer" onClick={() => setIsModalOpen(false)}>
-                    X
+                <button className="absolute top-8 right-8 z-50 cursor-pointer" onClick={() => setIsModalOpen(false)}>
+                    <Close />
                 </button>
 
                 {selectedProject && <ProjectDetailsModal project={selectedProject} />}
@@ -145,7 +159,7 @@ export default function Projects() {
             ))}
 
             <Swiper
-                className="projects-swiper w-full overflow-hidden"
+                className="projects-swiper w-full overflow-x-hidden"
                 effect="coverflow"
                 centeredSlides
                 slidesPerView="auto"
@@ -166,20 +180,17 @@ export default function Projects() {
                 modules={[EffectCoverflow]}
                 coverflowEffect={{
                     rotate: 0,
-                    stretch: 80,
+                    stretch: -20,
                     depth: 350,
                     modifier: 1,
                     slideShadows: false,
                 }}
             >
-                {projectsData.map((project) => (
+                {projectsData.map((project, index) => (
                     <SwiperSlide
                         key={project.title}
                         className="relative mt-48 w-[412px]! shrink-0"
-                        onClick={() => {
-                            setSelectedProject(project as Project);
-                            setIsModalOpen(true);
-                        }}>
+                        onClick={() => handleProjectSlideClick(index, project as Project)}>
                         <div className="relative">
                             <Image
                                 src={project.image}
