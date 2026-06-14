@@ -126,7 +126,7 @@ export default function Projects() {
     }, { scope: section });
 
     return (
-        <section ref={section} className='h-screen w-screen relative'>
+        <section ref={section} className='h-screen w-screen relative' id="projecten">
             <div 
                 className={`fixed top-0 left-0 w-full h-full bg-black/90 z-50 transition-opacity duration-700 ease-in-out ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsModalOpen(false)}

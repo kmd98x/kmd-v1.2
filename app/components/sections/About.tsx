@@ -60,7 +60,7 @@ export default function About() {
 	}, { scope: section });
 
 	return (
-		<section ref={section} className="relative h-[80vh] w-screen">
+		<section ref={section} className="relative h-[80vh] w-screen" id="over-mij">
 			<div className="title-pin-wrap w-full">
 				<Title className="section-title mt-[-10vh]">Over mij</Title>
 			</div>
