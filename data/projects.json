@@ -1,52 +1,606 @@
 [
     {
+        "title": "Capibara Rush",
         "image": "/projects/jaar2capibara.svg",
-        "title": "Capibara",
-        "excerpt": "Capibara is a company that is located in the Netherlands.",
-        "content": [
-            {"type": "title", "value": "Capibara"},
-            {"type": "text", "value": "Capibara is a company that is located in the Netherlands."},
-            {"type": "image", "url": "/projects/jaar2capibara.svg"}
+        "excerpt": "Een tastbaar bordspel dat kinderen onder de 10 spelenderwijs leert tellen van 1 tot en met 22  en ze ondertussen leuke weetjes over capibara's laat ontdekken.",
+        "tags": [
+            "Jaar 1",
+            "Makerslab",
+            "Figma",
+            "Individueel"
+        ],
+        "heroMedia": {
+            "type": "image",
+            "url": "/projects/capibara-rush/capibara-bordspel.png",
+            "caption": "Capibara is a company that is located in the Netherlands."
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Voor Project Interactie ontwierp ik een fysieke, interactieve toepassing. Ik koos bewust voor een haptisch spel zonder scherm, omdat ik wilde onderzoeken hoe tastbare interactie kan bijdragen aan het leerproces van jonge kinderen. Mijn persoonlijke leerdoel lag bij Prototyperen en Uitwerken."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Mijn design challenge luidt als volgt:"
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "\"Hoe kunnen we een bordspel ontwerpen waarmee jonge kinderen spelenderwijs leren tellen van 1 tot en met 22 en tegelijk leuke weetjes over capibara's ontdekken?\""
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Ik ontwierp voor jonge kinderen die leren tellen. Zij leren het best door te doen, aanraken, bewegen en spelen . Kinderen  raken snel afgeleid door schermen. Ze hebben behoefte aan duidelijke, herkenbare getallen en een eenvoudige, speelse opzet die niet te ingewikkeld is."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "text",
+                        "value": "Ontwerpkeuze: Een tastbaar spel met genummerde vakken, grote heldere vormen en een vrolijke, natuurlijke sfeer die past bij het capibara-thema en uitnodigt om te blijven spelen."
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "styles": "mb-6",
+                        "type": "text",
+                        "value": "Capibara Rush is een fysiek, haptisch bordspel waarmee kinderen spelenderwijs leren tellen. De vakken zijn genummerd van 1 tot en met 22, zodat spelers tijdens het bewegen van hun pion vanzelf tellen en zien waar ze staan. Onderweg pakken ze kaarten met weetjes over capibara's, waardoor leren en spelen samenkomen. Door bewust te kiezen voor een tastbaar spel zonder scherm, met onder andere een pop-o-matic dobbelsteen, blijft de interactie volledig fysiek en toegankelijk voor kleine handen. Voor het maken van het spel werkte ik in het MakersLab, waar ik de onderdelen met de laser cutter heb gesneden en gegraveerd."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/makerslab-bord-uitsnijden.png"
+                    }
+                ]
+            },
+            {
+                "title": "Iteraties",
+                "content": [
+                    {
+                        "styles": "col-start-1 col-span-12",
+                        "type": "text",
+                        "value": "Omdat mijn leerdoel bij prototypen lag, maakte ik meerdere versies. Elke iteratie paste ik aan op basis van eigen inzichten en feedback. Zo werd het spel telkens beter."
+                    },
+                    {
+                        "styles": "col-start-1 col-span-12 mb-6",
+                        "type": "text",
+                        "value": "Ik begon met karton en symmetrische, rechte vakjes om de werking van het spel te testen."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-1.png"
+                    },
+                    {
+                        "styles": "col-start-1 col-span-12 mt-6",
+                        "type": "text",
+                        "value": "Op basis van feedback en testen verfijnde ik de spelregels en de leesbaarheid van de getallen."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-2.png"
+                    },
+                    {
+                        "styles": "col-start-1 col-span-12 mt-6",
+                        "type": "title",
+                        "value": "Eindversie"
+                    },
+                    {
+                        "styles": "col-start-1 col-span-12",
+                        "type": "text",
+                        "value": "Ik stapte over op de lasercutter en hout, en koos voor een organische indeling van de vakken, zodat de speler het gevoel krijgt in de natuur te zijn."
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/iteratie-3.png"
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "col-start-3 col-span-8 mb-6",
+                        "type": "text",
+                        "value": "Capibara Rush is een fysiek bordspel van duurzaam hout met stevige plastic pionnen. De vakken zijn genummerd van 1 tot en met 22, zodat kinderen tijdens het spelen zien waar ze staan en spelenderwijs leren tellen. Onderweg pakken spelers kaarten met weetjes over capibara's. Als laatste stap gaf ik het eindproduct een persoonlijke touch door het zelf te verven en af te werken, zodat het spel kleurrijker en aantrekkelijker werd voor kinderen."
+                    },
+                    {
+                        "styles": "col-start-2 col-span-10",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/resultaat-foto-1.png"
+                    },
+                    {
+                        "styles": "col-start-3 col-span-8 mt-6",
+                        "type": "text",
+                        "value": "Omdat het spel haptisch is en geen scherm gebruikt, voegde ik een knop met pop-o-matic-effect toe: één druk en de dobbelsteen rolt vanzelf. Zo blijft de interactie volledig tastbaar en is het voor kleine handen makkelijk te bedienen."
+                    },
+                    {
+                        "styles": "col-start-2 col-span-10",
+                        "type": "image",
+                        "url": "/projects/capibara-rush/resultaat-foto-2.png"
+                    }
+                ]
+            }
         ]
     },
     {
+        "title": "Eu Tribes",
         "image": "/projects/jaar1eu-tribe.svg",
-        "title": "EU Tribe",
-        "excerpt": "EU Tribe is a community of people who are passionate about the environment and sustainability.",
-        "content": [
-            {"type": "title", "value": "EU Tribe"},
-            {"type": "text", "value": "EU Tribe is a community of people who are passionate about the environment and sustainability."},
-            {"type": "image", "url": "/projects/jaar1eu-tribe.svg"}
+        "excerpt": "Een interactieve app die reizende CMD-studenten met elkaar verbindt om samen Europa te ontdekken, tips te delen en een reisbuddy te vinden.",
+        "tags": [
+            "Jaar 1",
+            "Figma",
+            "Duo-project"
+        ],
+        "heroMedia": {
+            "type": "video",
+            "url": "/projects/videos/eutribe.mp4",
+            "caption": "1e concept video van Eu Tribes"
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Voor dit eerstejaars project ging ik samen met mijn duopartner aan de slag met een Design Challenge: ontwerp een interactieve toepassing voor een deel-community binnen CMD, zodat die groep zichtbaarder en meer gehoord wordt."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Wij kozen voor reizende studenten. Het resultaat is een reis-app voor CMD-studenten die door Europa willen reizen, met aanbevelingen, praktische informatie en de mogelijkheid om in contact te komen met medestudenten en samen een reisbuddy te vinden. Het doel: de reis-community onder CMD-studenten op 1 plek samenbrengen."
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Om gericht te kunnen ontwerpen werkte ik met een doelgroep, onderbouwd met interviews en een empathy map. Mijn doelgroep zijn CMD-studenten die graag door Europa reizen, maar niet goed weten waar ze moeten beginnen en het liefst met een groepje op pad gaan."
+                    },
+                    {
+                        "styles": "mt-6",
+                        "type": "image",
+                        "url": "/projects/eu-tribe/poster-2.png"
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Mijn duopartner en ik begonnen elk met een eigen concept. In plaats van er 1 te kiezen, zagen we dat onze ideeën elkaar juist versterkten  en brachten we ze samen."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-2 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Concept 1",
+                        "text": "**Duurzaam reizen & delen** \n Een app gericht op duurzaam reizen binnen de EU, waar gebruikers verhalen en tips delen en informatie over landen vinden."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-7 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Concept 2",
+                        "text": "**Een reis-community** \n Een app om een reis-community te vormen: reviews delen, chatten met anderen en samen een reisbuddy vinden."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "We voegden beide concepten samen tot één reis-app voor CMD-studenten: een plek waar je aanbevelingen en informatie vindt én in contact komt met medestudenten om samen op reis te gaan."
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "In de uiteindelijke app vinden studenten reisaanbevelingen en praktische informatie, komen ze in contact met medestudenten die ook reizen, en vinden ze samen een reisbuddy. Zo brengt de app de reis-community onder CMD-studenten op één plek samen. \n [Bekijk het prototype](https://www.figma.com/proto/DEvChDzRhSsFyn705N7Ysl/Project-included?node-id=1-23&t=gmOqr0SSEgYn94CO-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A23&fuid=1102224205114188958)"
+                    }
+                ]
+            }
         ]
     },
     {
-        "image": "/projects/jaar3minorKoffie.svg",
         "title": "The Morning Brew",
-        "excerpt": "The Morning Brew is a daily newsletter that is delivered to your inbox every morning.",
-        "content": [
-            {"type": "title", "value": "The Morning Brew"},
-            {"type": "text", "value": "The Morning Brew is a daily newsletter that is delivered to your inbox every morning."},
-            {"type": "image", "url": "/projects/jaar3minorKoffie.svg"}
+        "image": "/projects/the-morning-brew/slide-foto.svg",
+        "excerpt": "Een digitaal ontwerp voor een exclusieve koffie-boutique, met de focus op kleur en compositie binnen een lichte dag- en een donkere nachtmodus.",
+        "tags": [
+            "Jaar 3",
+            "Figma",
+            "Individueel"
+        ],
+        "heroMedia": {
+            "type": "video",
+            "url": "/projects/videos/koffiefilm.mp4",
+            "caption": ""
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Voor mijn minor Visual Interface Design in jaar 3 ontwierp ik een digitale ervaring voor The Morning Brew. De opdracht draaide om kleur en compositie: de luxe van een fysieke koffie boutique vertalen naar een lichte landingspagina die verkoopt en een donker dashboard dat de klant begeleidt . Twee schermen met dezelfde identiteit, in tegengestelde modi."
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Om gericht te kunnen ontwerpen werkte ik met een persona: Sophie, een beginnende koffiedrinker. Ze drinkt graag koffie, maar weet nog niet goed waarom ze de ene boon lekkerder vindt dan de andere en ze voelt zich snel geïntimideerd door vaktermen. Haar wens is op een visuele manier ontdekken welke smaken bij haar passen. Sophie vroeg daarmee om een toegankelijke en geruststellende uitstraling: zachte kleuren, ronde vormen en veel visuele ondersteuning. Zij werd mijn leidraad bij elke ontwerpkeuze."
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "type": "title-text",
+                        "blockStyles": "md:col-start-2 md:col-span-5 col-start-1 col-span-12",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Uitgangspunten",
+                        "text": "Ik startte vanuit de aangeleverde content en de ontwerpregels van de opdracht. Door die kaders eerst helder te krijgen, kon ik gericht keuzes maken in plaats van achteraf bijsturen."
+                    },
+                    {
+                        "type": "title-text",
+                        "blockStyles": "md:col-start-7 md:col-span-5 col-start-1 col-span-12",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Kleur & contrast",
+                        "text": "Met de 60-30-10 verhouding bouwde ik een consistent palet op. De grootste uitdaging was de overgang van dag naar nacht: ik paste verzadiging en contrast bewust aan om de visuele hiërarchie en de toegankelijkheid (WCAG) in beide modi overeind te houden."
+                    },
+                    {
+                        "type": "title-text",
+                        "blockStyles": "md:col-start-2 md:col-span-5 col-start-1 col-span-12",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Compositie & structuur",
+                        "text": "Ik werkte met een gridsysteem voor alle afstanden en zette contrast en grootte in om de belangrijkste actie direct vindbaar te maken, voor zowel de landingspagina als het dashboard."
+                    },
+                    {
+                        "type": "title-text",
+                        "blockStyles": "md:col-start-7 md:col-span-5 col-start-1 col-span-12",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Opbouw in Figma",
+                        "text": "De schermen bouwde ik schaalbaar op met Local Styles en Auto Layout, en ik maakte een werkend prototype met een creatieve bijpassende toggle tussen dag- en nachtmodus."
+                    }
+                ]
+            },
+            {
+                "title": "Iteraties",
+                "content": [
+                    {
+                        "styles": "col-span-11",
+                        "type": "text",
+                        "value": "Voordat ik tot het uiteindelijke ontwerp kwam, had ik 3 verschillende designs. Elke versie testte een ander idee over kleur en compositie."
+                    },
+                    {
+                        "styles": "",
+                        "type": "gallery",
+                        "lightboxTag": "the-morning-brew-iteraties",
+                        "images": [
+                            "/projects/the-morning-brew/iteratie-1.svg",
+                            "/projects/the-morning-brew/iteratie-2.svg",
+                            "/projects/the-morning-brew/iteratie-3.svg"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "mb-6",
+                        "type": "text",
+                        "value": "Het eindresultaat bestaat uit twee schermen met dezelfde identiteit, maar in tegengestelde modi. The Morning Brew is de lichte landingspagina: luchtig en uitnodigend, gericht op sfeer en verkoop. The Personal Barista is het donkere dashboard: rustig en functioneel, voor smaakprofielen en loyaliteit. De grootste winst zat in de overgang tussen beide, door verzadiging en contrast bewust aan te passen, blijven de visuele hiërarchie en de toegankelijkheid in zowel de dag- als de nachtmodus overeind. [Bekijk het prototype](https://www.figma.com/proto/gRaqIxk3HlqQGzfzVHlMxW/Minor-VID-kleur-and-compositie-8?node-id=336-2&t=WGUOjUEEIpcQMmB9-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=155%3A22&fuid=1102224205114188958)"
+                    },
+                    {
+                        "styles": "grid sm:grid-cols-2!",
+                        "type": "gallery",
+                        "lightboxTag": "the-morning-brew-resultaat",
+                        "images": [
+                            "/projects/the-morning-brew/final-landingspagina.png",
+                            "/projects/the-morning-brew/final-dashboard.png"
+                        ]
+                    }
+                ]
+            }
         ]
     },
     {
-        "image": "/projects/jaar3minor.svg",
-        "title": "Het omnient model",
-        "excerpt": "Het omnient magazine is a monthly magazine that is delivered to your inbox every month.",
-        "content": [
-            {"type": "title", "value": "Het omnient magazine"},
-            {"type": "text", "value": "Het omnient magazine is a monthly magazine that is delivered to your inbox every month."},
-            {"type": "image", "url": "/projects/jaar3minor.svg"}
+        "title": "Omnient",
+        "image": "/projects/omnient/slide-foto.svg",
+        "excerpt": "Mijn minor Behaviour Design resulteerde in dit project waar ik het meest trots op ben: een digitaal bordspel voor jonge professionals en trainees. Het spel helpt spelers bewuster te worden van patronen en overtuigingen die hen belemmeren om zichzelf volledig te zijn.",
+        "tags": [
+            "Jaar 3",
+            "Figma",
+            "Team verband"
+        ],
+        "heroMedia": {
+            "type": "video",
+            "url": "/projects/videos/omnientfilm.mp4",
+            "caption": ""
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Voor de minor Behavior Design werkten we in een team van drie aan een opdracht van RockportInk. Startende managers komen vaak vol frisse ideeën een organisatie binnen, maar passen zich onder druk snel aan de bestaande cultuur aan, waardoor ze hun eigen stijl verliezen."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Onze opdracht was om hen op een toegankelijke manier kennis te laten maken met de eerste drie stappen van het Omnient-model, zodat ze meer zelfinzicht krijgen en bewustere keuzes maken in hun leiderschap. We verkenden 2 concepten. Een app en een bordspel. We kozen op basis van onderzoek en feedback voor het bordspel, omdat dat actiever tot reflectie aanzet en meteen een gesprek op gang brengt."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Onze design challenge luidt als volgt: \n \"Hoe kunnen we startende managers en trainees kennis laten maken met de eerste drie stappen uit het Omnient-model, zodat zij hun zelfinzicht vergroten en krachtige keuzes kunnen maken in gedrag, communicatie en leiderschap?\""
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Onze doelgroep zijn startende managers & trainees met 0-2 jaar ervaring. \n Onze doelgroep stapt nieuw binnen in organisaties met een bestaande leiderschapscultuur en voelt druk om zich te bewijzen. Daardoor vermijden ze conflict, passen ze zich aan of trekken ze zich terug  en raken ze (vaak onbewust) hun eigen stijl kwijt. Ze weten wel wat ze moeten doen, maar niet goed wie ze zijn in hun rol."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Ontwerpkeuze: een laagdrempelige, veilige manier om stil te staan bij hun eigen gedrag, onderbouwd met deskresearch, interviews en een workshop, geanalyseerd met het SUE Influence Framework."
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Omnient is een fysiek bordspel dat startende managers en trainees op een speelse, laagdrempelige manier helpt om hun eigen gedragspatronen te herkennen. Spelers bewegen over het bord en trekken kaarten met herkenbare uitspraken, die ze koppelen aan één van de vijf patronen uit het Drowning Person-model (Try Hard, Pleaser, Be Perfect, Be Strong en Hurry Up). Aan het einde ontdekken ze welk patroon bij hen overheerst en formuleren ze met een reflectievel een persoonlijke coachingsvraag. Door het spel in een klein, vertrouwd groepje te spelen, ontstaat een veilige sfeer waarin reflectie minder zwaar voelt dan een coachgesprek."
+                    }
+                ]
+            },
+            {
+                "title": "Iteraties",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Voordat ik tot het uiteindelijke ontwerp kwam, had ik 3 verschillende designs. Elke versie testte een ander idee over kleur en compositie."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-2 col-span-10",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Van 2 concepten naar 1",
+                        "text": "We begonnen met 2 concepten: een online reflectiemodel (app) en een bordspel. Omdat we op het bordspel duidelijk meer positieve feedback kregen  van medestudenten, coaches en onze opdrachtgever, kozen we ervoor dat concept verder uit te werken. Dit is de online app. U kunt hem ook via deze link bekijken.",
+                        "media": {
+                            "type": "video",
+                            "url": "/projects/videos/1econcept.mp4"
+                        }
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-2 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Zelf categoriseren",
+                        "text": "We begonnen met 2 concepten: Eerst koppelden we elke kaart aan een vast patroon. Omdat een uitspraak bij meerdere patronen kan passen, lieten we spelers de kaarten voortaan zelf bij een patroon leggen. Dat voelt meer als een eigen keuze."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-7 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Veiligheid zichtbaar maken",
+                        "text": "Je deelt pas eerlijk als het veilig voelt. Daarom kwamen er korte regels op de kaarten: \"wat je deelt blijft hier\", \"overslaan mag\" en \"er zijn geen foute antwoorden\"."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-2 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "De juiste toon",
+                        "text": "We testten de tone of voice: een directe toon kwam te hard aan, verhalend werd te specifiek. Een luchtige toon bleek het meest toegankelijk en herkenbaar."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-7 col-span-5",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Solo en online-variant",
+                        "text": "We voegden een solo-modus toe voor reflectie op eigen tempo, en bedachten een online variant voor teams die niet fysiek samen kunnen zitten."
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Een fysiek bordspel voor jonge leiders, dat zowel alleen als in een klein, vertrouwd groepje gespeeld kan worden. Spelers bewegen over het bord, trekken kaarten met herkenbare uitspraken en leggen die bij één van de vijf gedragspatronen uit het Drowning Person-model: Try Hard, Pleaser, Be Perfect, Be Strong en Hurry Up. Aan het einde ontdekken ze welk patroon dominant is en formuleren ze met een reflectievel een persoonlijke coachingsvraag. Complimenten- en bondingkaarten houden de sfeer licht en veilig. \n [Bekijk het project](https://kmd-minorbd-omnient.vercel.app/)"
+                    },
+                    {
+                        "styles": "grid sm:grid-cols-1! mt-6",
+                        "type": "gallery",
+                        "lightboxTag": "omnient-resultaat",
+                        "images": [
+                            "/projects/omnient/einde-spel-scherm.png",
+                            "/projects/omnient/reflectie-scherm.png"
+                        ]
+                    }
+                ]
+            }
         ]
     },
     {
-        "image": "/projects/jaar2gemeente-rotterdam.svg",
-        "title": "Gemeente Rotterdam",
-        "excerpt": "Gemeente Rotterdam is a city that is located in the Netherlands.",
-        "content": [
-            {"type": "title", "value": "Gemeente Rotterdam"},
-            {"type": "text", "value": "Gemeente Rotterdam is a city that is located in the Netherlands."},
-            {"type": "image", "url": "/projects/jaar2gemeente-rotterdam.svg"}
+        "title": "Public City Jazz",
+        "image": "/projects/public-city-jazz/slide-foto.svg",
+        "excerpt": "Een one-page campagnewebsite voor het gratis jazz-event van Gemeente Rotterdam. Mijn eerste ontwerp binnen een bestaand design systeem, uitgewerkt voor drie schermformaten.",
+        "tags": [
+            "Jaar 2",
+            "Figma",
+            "Individueel"
+        ],
+        "heroMedia": {
+            "type": "image",
+            "url": "/projects/public-city-jazz/hero-foto.svg",
+            "caption": ""
+        },
+        "tabs": [
+            {
+                "title": "Over het project",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Ik ontwierp een one-page campagnewebsite voor Public City Jazz, een gratis muziekevent van Gemeente Rotterdam dat een jonger publiek wil kennis laten maken met instrumentale muziek zoals jazz. De website moet de energie van een muziekevent uitstralen én herkenbaar blijven als Gemeente Rotterdam."
+                    }
+                ]
+            },
+            {
+                "title": "Persona",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "De doelgroep is een jonger publiek dat nog weinig met jazz heeft, maar openstaat voor live muziek en leuke, gratis dingen in de stad. Iemand die graag nieuwe muziek ontdekt, maar afhaakt zodra iets te stoffig of te formeel aanvoelt."
+                    },
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Ontwerpkeuze: een energieke, eigentijdse website die drempelloos uitlegt wat het event is, en met een duidelijke call-to-action naar het aanmeldformulier leidt."
+                    }
+                ]
+            },
+            {
+                "title": "Concept",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-1 col-span-4",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Het design systeem leren kennen",
+                        "text": "Ik begon met het verkennen van de componenten, kleuren en typografie uit het design systeem van Gemeente Rotterdam, zodat ik wist binnen welke kaders ik kon werken."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-5 col-span-4",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Een eigen muziek twist",
+                        "text": "Vervolgens voegde ik eigen visuele stijlelementen toe die het gevoel van een muziekevent oproepen, zonder de herkenbaarheid van de gemeente te verliezen."
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-9 col-span-4",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Responsive uitgewerkt",
+                        "text": "Ten slotte werkte ik het ontwerp uit voor drie schermformaten : mobiel, mid-screen en large-screen, zodat de website op elk apparaat goed werkt."
+                    }
+                ]
+            },
+            {
+                "title": "Resultaat",
+                "content": [
+                    {
+                        "styles": "",
+                        "type": "text",
+                        "value": "Een one-page campagnewebsite, ontworpen voor mobiel, mid-screen en large-screen. De site presenteert het event, de uitgelichte artiesten, Sirocco, Gabriël Noerens Trio en Tamás Jurisits Group, quotes van bezoekers en een duidelijke call-to-action naar het aanmeldformulier. Eigen visuele stijlelementen geven de site de energie van een muziekevent, terwijl de huisstijl van Gemeente Rotterdam herkenbaar blijft. [Link naar Figma bestand](https://www.figma.com/design/Rku4wjORD58t7ejFLqMKTi/J2-B2-Vormgeving-2?node-id=0-1&p=f&t=RLnNIW4GBZ9u7DU1-0)"
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-1 col-span-3 border-0 bg-transparent",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Mobiel",
+                        "text": "",
+                        "media": {
+                            "type": "image",
+                            "url": "/projects/public-city-jazz/resultaat-mobiel-design.svg"
+                        }
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-4 col-span-3 border-0 bg-transparent",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Mid screen",
+                        "text": "",
+                        "media": {
+                            "type": "image",
+                            "url": "/projects/public-city-jazz/resultaat-mid-screen.svg"
+                        }
+                    },
+                    {
+                        "styles": "",
+                        "type": "title-text",
+                        "blockStyles": "col-start-7 col-span-7 border-0 bg-transparent",
+                        "titleStyles": "",
+                        "textStyles": "",
+                        "title": "Large screen",
+                        "text": "",
+                        "media": {
+                            "type": "image",
+                            "url": "/projects/public-city-jazz/resultaat-large-screen.svg"
+                        }
+                    }
+                ]
+            }
         ]
     }
 ]

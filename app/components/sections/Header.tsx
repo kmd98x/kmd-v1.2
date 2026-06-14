@@ -33,8 +33,9 @@ export default function Header() {
             ref={container}
             data-scroll-section="hero"
             className="relative z-20 h-screen w-screen"
+            id="home"
         >
-            <div className="hero-pin h-screen w-screen flex items-center justify-center">
+            <div className="hero-pin h-screen w-screen flex items-center justify-center px-8">
                 <Image src="/hero-image.svg" loading="eager" className="hero-image h-auto w-auto" ref={imageRef} alt="Header" width={1000} height={1000} />
             </div>
         </section>

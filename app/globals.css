@@ -19,7 +19,14 @@
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+}
+
+a, p, ul, ol, li, span {
+	@apply font-alegreya-sans;
+}
+
+p {
+	font-size: clamp(1rem, 1.5vw + 1rem, 1.25rem);
 }
 
 .site-navigation a {

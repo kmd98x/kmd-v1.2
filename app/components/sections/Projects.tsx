@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -16,11 +16,30 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 import Title from "../global/Title";
 import Image from "next/image";
+import { Project } from "@/types/project";
+import ProjectDetailsModal from "../ProjectDetailsModal";
+import Close from "../icons/Close";
+
 
 export default function Projects() {
     const section = useRef<HTMLDivElement>(null);
+    const modalRef = useRef<HTMLDivElement>(null);
+    const swiperRef = useRef<SwiperInstance | null>(null);
+
     const initialSlide = 2;
     const [currentSlide, setCurrentSlide] = useState(initialSlide);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    useEffect(() => {
+        if (isModalOpen) {
+            modalRef.current?.focus();
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'scroll';
+        }
+    }, [isModalOpen]);
 
     const handleSlideChange = (swiper: SwiperInstance) => {
         setCurrentSlide(swiper.realIndex);
@@ -39,8 +58,15 @@ export default function Projects() {
     };
 
     const handleSwiperReady = (swiper: SwiperInstance) => {
+        swiperRef.current = swiper;
+
         handleSlideChange(swiper);
         syncSlideOverlays(swiper);
+    };
+
+    const handleProjectSlideClick = (project: Project) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
     };
 
     useGSAP(() => {
@@ -48,7 +74,7 @@ export default function Projects() {
             opacity: 0,
             y: -30,
         }, {
-            opacity: 0.4,
+            opacity: 0.5,
             y: 0,
             ease: "none",
             scrollTrigger: {
@@ -60,14 +86,16 @@ export default function Projects() {
         });
 
         SplitText.create('.project-title', {
-            type: 'chars',
-            mask: 'chars',
-            charsClass: 'project-title-char',
+            type: 'lines',
+            mask: 'lines',
+            linesClass: 'project-title-line',
             onSplit: (self) => {
-                return gsap.from(self.chars, {
+                return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-55% top",
+                        start: "-50% top",
+                        end: "-20% top",
+                        scrub: true,
                     },
                     y: 50,
                     duration: 1,
@@ -84,33 +112,67 @@ export default function Projects() {
                 return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-50% top",
+                        start: "-40% top",
+                        end: "-20% top",
+                        scrub: true,
                     },
                     y: 50,
-                    duration: .15,
+                    duration: 2,
                     stagger: 0.1,
                 });
             }
         });
+
+        gsap.from('.swiper-slide', {
+            scrollTrigger: {
+                trigger: section.current,
+                start: "-30% top",
+                end: "-20% top",
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 0,
+            y: 10,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.inOut",
+        })
     }, { scope: section });
 
     return (
-        <section ref={section} className='h-screen w-screen relative'>
+        <section ref={section} className='h-[90vh] w-screen relative' id="projecten">
+            <div
+                className={`fixed top-0 left-0 w-full h-full bg-black/90 z-50 transition-opacity duration-700 ease-in-out ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                onClick={() => setIsModalOpen(false)}
+            ></div>
+
+            <div
+                className={`fixed h-[calc(100vh-80px)] w-screen bg-[#0C0C0C] overflow-y-auto z-50 transition-all duration-700 ease-in-out outline-0 ${isModalOpen ? 'top-20' : 'top-full'}`}
+                ref={modalRef}
+                tabIndex={-1}
+                onKeyDown={(e) => {
+                    if (e.key === "Escape") {
+                        setIsModalOpen(false);
+                    }
+                }}
+            >
+                <button className="absolute top-8 right-8 z-50 cursor-pointer" onClick={() => setIsModalOpen(false)}>
+                    <Close />
+                </button>
+
+                {selectedProject && <ProjectDetailsModal project={selectedProject} />}
+            </div>
+
             <Title className="section-title absolute top-0 left-0 mt-[-16vh]">Mijn projecten</Title>
 
             {projectsData.map((project, index) => (
                 <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2`}>
-                    <h3 className="project-title font-alegreya-sans text-4xl text-center">{project.title}</h3>
-                    <p className="project-excerpt font-alegreya-sans text-center max-w-[60ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.75rem)]">{project.excerpt}</p>
+                    <h3 className="project-title font-alegreya-sans-sc text-4xl text-center mb-4">{project.title}</h3>
+                    <p className="project-excerpt font-alegreya-sans text-center max-w-[70ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.5rem)]!">{project.excerpt}</p>
                 </div>
             ))}
 
-            <span className="project-cursor pointer-events-none absolute z-20 flex h-32 w-32 items-center justify-center rounded-full bg-black/50 text-white">
-                Bekijk project
-            </span>
-
             <Swiper
-                className="projects-swiper w-full overflow-hidden"
+                className="projects-swiper w-full overflow-x-hidden"
                 effect="coverflow"
                 centeredSlides
                 slidesPerView="auto"
@@ -131,14 +193,19 @@ export default function Projects() {
                 modules={[EffectCoverflow]}
                 coverflowEffect={{
                     rotate: 0,
-                    stretch: 80,
+                    stretch: -20,
                     depth: 350,
                     modifier: 1,
                     slideShadows: false,
                 }}
             >
                 {projectsData.map((project) => (
-                    <SwiperSlide key={project.title} className="relative mt-48 !w-[412px] shrink-0">
+                    <SwiperSlide
+                        key={project.title}
+                        className="relative mt-50 w-[412px]! shrink-0"
+
+                        onClick={() => handleProjectSlideClick(project as Project)}
+                    >
                         <div className="relative">
                             <Image
                                 src={project.image}
@@ -149,7 +216,7 @@ export default function Projects() {
                             />
                             <div
                                 className="slide-dim pointer-events-none absolute inset-0 z-10 bg-black/50 opacity-100 transition-opacity duration-1000 ease-in-out"
-                                aria-hidden
+                                aria-hidden="true"
                             />
                         </div>
                     </SwiperSlide>
