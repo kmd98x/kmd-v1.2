@@ -221,15 +221,7 @@
                     {
                         "styles": "",
                         "type": "text",
-                        "value": "In de uiteindelijke app vinden studenten reisaanbevelingen en praktische informatie, komen ze in contact met medestudenten die ook reizen, en vinden ze samen een reisbuddy. Zo brengt de app de reis-community onder CMD-studenten op één plek samen."
-                    },
-                    {
-                        "styles": "",
-                        "type": "link",
-                        "url": "https://www.figma.com/proto/DEvChDzRhSsFyn705N7Ysl/Project-included?node-id=1-23&t=gmOqr0SSEgYn94CO-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A23&fuid=1102224205114188958",
-                        "text": "Bekijk het prototype",
-                        "target": "_blank",
-                        "rel": "noopener noreferrer"
+                        "value": "In de uiteindelijke app vinden studenten reisaanbevelingen en praktische informatie, komen ze in contact met medestudenten die ook reizen, en vinden ze samen een reisbuddy. Zo brengt de app de reis-community onder CMD-studenten op één plek samen. \n [Bekijk het prototype](https://www.figma.com/proto/DEvChDzRhSsFyn705N7Ysl/Project-included?node-id=1-23&t=gmOqr0SSEgYn94CO-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A23&fuid=1102224205114188958)"
                     }
                 ]
             }
@@ -311,7 +303,7 @@
                 "title": "Iteraties",
                 "content": [
                     {
-                        "styles": "",
+                        "styles": "col-span-11",
                         "type": "text",
                         "value": "Voordat ik tot het uiteindelijke ontwerp kwam, had ik 3 verschillende designs. Elke versie testte een ander idee over kleur en compositie."
                     },
@@ -320,9 +312,9 @@
                         "type": "gallery",
                         "lightboxTag": "the-morning-brew-iteraties",
                         "images": [
-                            "/projects/the-morning-brew/iteratie-1.png",
-                            "/projects/the-morning-brew/iteratie-2.png",
-                            "/projects/the-morning-brew/iteratie-3.png"
+                            "/projects/the-morning-brew/iteratie-1.svg",
+                            "/projects/the-morning-brew/iteratie-2.svg",
+                            "/projects/the-morning-brew/iteratie-3.svg"
                         ]
                     }
                 ]
@@ -330,6 +322,11 @@
             {
                 "title": "Resultaat",
                 "content": [
+                    {
+                        "styles": "mb-6",
+                        "type": "text",
+                        "value": "Het eindresultaat bestaat uit twee schermen met dezelfde identiteit, maar in tegengestelde modi. The Morning Brew is de lichte landingspagina: luchtig en uitnodigend, gericht op sfeer en verkoop. The Personal Barista is het donkere dashboard: rustig en functioneel, voor smaakprofielen en loyaliteit. De grootste winst zat in de overgang tussen beide, door verzadiging en contrast bewust aan te passen, blijven de visuele hiërarchie en de toegankelijkheid in zowel de dag- als de nachtmodus overeind. [Bekijk het prototype](https://www.figma.com/proto/gRaqIxk3HlqQGzfzVHlMxW/Minor-VID-kleur-and-compositie-8?node-id=336-2&t=WGUOjUEEIpcQMmB9-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=155%3A22&fuid=1102224205114188958)"
+                    },
                     {
                         "styles": "grid sm:grid-cols-2!",
                         "type": "gallery",
@@ -468,7 +465,7 @@
                     {
                         "styles": "",
                         "type": "text",
-                        "value": "Een fysiek bordspel voor jonge leiders, dat zowel alleen als in een klein, vertrouwd groepje gespeeld kan worden. Spelers bewegen over het bord, trekken kaarten met herkenbare uitspraken en leggen die bij één van de vijf gedragspatronen uit het Drowning Person-model: Try Hard, Pleaser, Be Perfect, Be Strong en Hurry Up. Aan het einde ontdekken ze welk patroon dominant is en formuleren ze met een reflectievel een persoonlijke coachingsvraag. Complimenten- en bondingkaarten houden de sfeer licht en veilig."
+                        "value": "Een fysiek bordspel voor jonge leiders, dat zowel alleen als in een klein, vertrouwd groepje gespeeld kan worden. Spelers bewegen over het bord, trekken kaarten met herkenbare uitspraken en leggen die bij één van de vijf gedragspatronen uit het Drowning Person-model: Try Hard, Pleaser, Be Perfect, Be Strong en Hurry Up. Aan het einde ontdekken ze welk patroon dominant is en formuleren ze met een reflectievel een persoonlijke coachingsvraag. Complimenten- en bondingkaarten houden de sfeer licht en veilig. \n [Bekijk het project](https://kmd-minorbd-omnient.vercel.app/)"
                     },
                     {
                         "styles": "grid sm:grid-cols-1! mt-6",
@@ -478,14 +475,6 @@
                             "/projects/omnient/einde-spel-scherm.png",
                             "/projects/omnient/reflectie-scherm.png"
                         ]
-                    },
-                    {
-                        "type": "link",
-                        "url": "https://kmd-minorbd-omnient.vercel.app/",
-                        "text": "Bekijk het prototype",
-                        "target": "_blank",
-                        "rel": "noopener noreferrer",
-                        "styles": "mt-6 text-center"
                     }
                 ]
             }

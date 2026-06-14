@@ -65,7 +65,7 @@ export default function About() {
 				<Title className="section-title mt-[-10vh]">Over mij</Title>
 			</div>
 
-			<p className="about-text text-[clamp(0.875rem,0.8vw+0.875rem,1.75rem)] font-alegreya-sans absolute top-40 left-1/2 -translate-x-1/2 mt-[10vh]">
+			<p className="about-text text-[clamp(0.875rem,0.8vw+0.875rem,1.75rem)]! font-alegreya-sans absolute top-40 left-1/2 -translate-x-1/2 mt-[10vh]">
 				Ik ben Martina Doekharan, 3ᵉ jaars student Communication and Multimedia Design aan de Hogeschool van Amsterdam en ben afkomstig uit Suriname. Mijn focus ligt op visual design. Het creëren van digitale producten die niet alleen functioneel zijn, maar ook visueel overtuigen en gebruikers raken. Momenteel volg ik mijn 2e minor Visual Interface Design, waar ik mijn vaardigheden in compositie, typografie en visuele hiërarchie verder ontwikkel. Het mooiste vind ik wanneer design niet alleen goed werkt, maar ook impact maakt. Daar wil ik me tijdens mijn stage op richten.
 			</p>
 		</section>

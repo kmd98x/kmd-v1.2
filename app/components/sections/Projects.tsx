@@ -91,14 +91,16 @@ export default function Projects() {
         });
 
         SplitText.create('.project-title', {
-            type: 'chars',
-            mask: 'chars',
-            charsClass: 'project-title-char',
+            type: 'lines',
+            mask: 'lines',
+            linesClass: 'project-title-line',
             onSplit: (self) => {
-                return gsap.from(self.chars, {
+                return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-55% top",
+                        start: "-50% top",
+                        end: "-20% top",
+                        scrub: true,
                     },
                     y: 50,
                     duration: 1,
@@ -115,18 +117,34 @@ export default function Projects() {
                 return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-50% top",
+                        start: "-40% top",
+                        end: "-20% top",
+                        scrub: true,
                     },
                     y: 50,
-                    duration: .15,
+                    duration: 2,
                     stagger: 0.1,
                 });
             }
         });
+
+        gsap.from('.swiper-slide', {
+            scrollTrigger: {
+                trigger: section.current,
+                start: "-30% top",
+                end: "-20% top",
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 0,
+            y: 10,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.inOut",
+        })
     }, { scope: section });
 
     return (
-        <section ref={section} className='h-screen w-screen relative' id="projecten">
+        <section ref={section} className='h-[90vh] w-screen relative' id="projecten">
             <div 
                 className={`fixed top-0 left-0 w-full h-full bg-black/90 z-50 transition-opacity duration-700 ease-in-out ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsModalOpen(false)}
@@ -153,8 +171,8 @@ export default function Projects() {
 
             {projectsData.map((project, index) => (
                 <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2`}>
-                    <h3 className="project-title font-alegreya-sans text-4xl text-center">{project.title}</h3>
-                    <p className="project-excerpt font-alegreya-sans text-center max-w-[60ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.75rem)]">{project.excerpt}</p>
+                    <h3 className="project-title font-alegreya-sans-sc text-4xl text-center mb-4">{project.title}</h3>
+                    <p className="project-excerpt font-alegreya-sans text-center max-w-[70ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.5rem)]!">{project.excerpt}</p>
                 </div>
             ))}
 
@@ -189,7 +207,7 @@ export default function Projects() {
                 {projectsData.map((project, index) => (
                     <SwiperSlide
                         key={project.title}
-                        className="relative mt-48 w-[412px]! shrink-0"
+                        className="relative mt-50 w-[412px]! shrink-0"
                         onClick={() => handleProjectSlideClick(index, project as Project)}>
                         <div className="relative">
                             <Image

@@ -13,31 +13,30 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
     return (
         <div className="max-w-7xl mx-auto px-4 pt-20 overflow-y-auto z-50">
             <h3 className="font-montez text-7xl text-center">{project.title}</h3>
-            <p className="font-alegreya-sans text-center max-w-[60ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.25rem)] mt-5">{project.excerpt}</p>
+            <p className="font-alegreya-sans text-center max-w-[90ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.25rem)] mt-5">{project.excerpt}</p>
 
-            <div className="flex flex-wrap gap-4 justify-center mt-10">
+            <div className="flex flex-wrap gap-4 justify-center mt-4">
                 {project.tags.map((tag) => (
-                    <span key={tag} className="font-alegreya-sans text-sm bg-[#231F1C]/50 px-4 py-2 rounded-lg">{tag}</span>
+                    <span key={tag} className="font-alegreya-sans text-lg bg-[#231F1C]/50 px-4 py-2 rounded-lg">{tag}</span>
                 ))}
             </div>
 
             <div className="relative">
-                <span className="absolute bottom-0 blur-2xl rounded-full w-full h-10 "></span>
                 {project.heroMedia.type === "image" && (
-                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} loading="eager" className="w-full h-auto mt-10" />
+                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} loading="eager" className="w-full max-w-[980px] mx-auto h-auto mt-10" />
                 )}
                 {project.heroMedia.type === "video" && (
-                    <video src={project.heroMedia.url} controls className="w-full h-auto mt-10" />
+                    <video src={project.heroMedia.url} controls className="w-full max-w-[980px] mx-auto h-auto mt-10" />
                 )}
             </div>
 
-            <div className="mt-10 bg-linear-to-br from-[#231F1C]/50 to-[#231F1C]/0 via-[#000000]/20 border border-[#231F1C]/50 border-b-0 rounded-tr-3xl rounded-tl-3xl p-10">
-                <div className="flex max-md:overflow-x-auto md:justify-center items-center gap-10 p-4 border-b border-[#231F1C]/50">
+            <div className="mt-4 pb-20">
+                <div className="flex max-md:overflow-x-auto md:justify-center items-center p-4 border-b border-[#231F1C]">
                     {project.tabs.map((tab) => (
                         <h4
                             key={tab.title}
-                            className={`font-alegreya-sans text-2xl whitespace-nowrap
-                                ${activeTab === tab.title ? 'rounded-lg px-8 py-3 bg-[#231F1C]' : ''} cursor-pointer`}
+                            className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-2xl whitespace-nowrap
+                                ${activeTab === tab.title ? 'rounded-lg bg-[#231F1C]/50 scale-105' : ''} cursor-pointer`}
                             onClick={() => setActiveTab(tab.title)}
                         >{tab.title}</h4>
                     ))}
@@ -50,7 +49,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                             case "subtitle":
                             case "text":
                                 return (
-                                    <RichText key={index} text={content.value} className={twMerge("col-start-2 col-span-10 whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1rem)]", content?.styles || "")} />
+                                    <RichText key={index} text={content.value} className={twMerge("col-start-2 col-span-10 whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1.25rem)]!", content?.styles || "")} />
                                 );
                             case "image":
                                 return (
@@ -62,7 +61,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                                         {content.images.map((image, imageIndex) => (
                                             <a
                                                 key={imageIndex}
-                                                href={image}
+                                                href={`${image}-thumbnail.svg`}
                                                 data-lightbox={content.lightboxTag ?? ""}
                                             >
                                                 <img src={image} alt="" loading="eager" className="w-full h-auto" />
@@ -79,7 +78,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                                 return (
                                     <div key={index} className={twMerge("border border-[#231F1C] bg-[#231F1C]/15 rounded-lg p-4", content?.blockStyles || "")}>
                                         <h5 className={twMerge("font-alegreya-sans text-2xl font-bold", content?.titleStyles || "")}>{content.title}</h5>
-                                        <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1rem)]", content?.textStyles || "")} />
+                                        <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1.25rem)]!", content?.textStyles || "")} />
                                         {content.media && (
                                             <div className={twMerge("mt-4", content.media.styles || "")}>
                                                 {content.media.type === "image" && (
