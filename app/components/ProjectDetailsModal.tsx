@@ -23,10 +23,10 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
 
             <div className="relative">
                 {project.heroMedia.type === "image" && (
-                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} loading="eager" className="w-full max-w-[980px] mx-auto h-auto mt-10" />
+                    <img src={project.heroMedia.url} alt={project.heroMedia.caption || project.title} loading="eager" className="w-full max-w-245 mx-auto h-auto mt-10" />
                 )}
                 {project.heroMedia.type === "video" && (
-                    <video src={project.heroMedia.url} controls className="w-full max-w-[980px] mx-auto h-auto mt-10" />
+                    <video src={project.heroMedia.url} controls className="w-full max-w-245 mx-auto h-auto mt-10" />
                 )}
             </div>
 
@@ -37,7 +37,10 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                             key={tab.title}
                             className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-2xl whitespace-nowrap
                                 ${activeTab === tab.title ? 'rounded-lg bg-[#231F1C]/50 scale-105' : ''} cursor-pointer`}
-                            onClick={() => setActiveTab(tab.title)}
+                            onClick={(e) => {
+                                setActiveTab(tab.title);
+                                e.currentTarget.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+                            }}
                         >{tab.title}</h4>
                     ))}
                 </div>
