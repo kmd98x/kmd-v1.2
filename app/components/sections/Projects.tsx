@@ -139,7 +139,7 @@ export default function Projects() {
     }, { scope: section });
 
     return (
-        <section ref={section} className='h-[90vh] w-screen relative' id="projecten">
+        <section ref={section} className='h-[90vh] min-h-220 w-screen relative' id="projecten">
             <div
                 className={`fixed top-0 left-0 w-full h-full bg-black/90 z-50 transition-opacity duration-700 ease-in-out ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsModalOpen(false)}
@@ -165,9 +165,9 @@ export default function Projects() {
             <Title className="section-title absolute top-0 left-0 mt-[-16vh]">Mijn projecten</Title>
 
             {projectsData.map((project, index) => (
-                <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2`}>
+                <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full`}>
                     <h3 className="project-title font-alegreya-sans-sc text-4xl text-center mb-4">{project.title}</h3>
-                    <p className="project-excerpt font-alegreya-sans text-center max-w-[70ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.5rem)]!">{project.excerpt}</p>
+                    <p className="project-excerpt font-alegreya-sans text-center w-full md:max-w-[70ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.5rem)]!">{project.excerpt}</p>
                 </div>
             ))}
 
@@ -202,7 +202,7 @@ export default function Projects() {
                 {projectsData.map((project) => (
                     <SwiperSlide
                         key={project.title}
-                        className="relative mt-50 w-[412px]! shrink-0"
+                        className="relative mt-58 md:mt-50 w-90! md:w-103! shrink-0"
 
                         onClick={() => handleProjectSlideClick(project as Project)}
                     >

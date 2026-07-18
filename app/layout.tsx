@@ -26,6 +26,12 @@ const MontezFont = Montez({
 export const metadata: Metadata = {
 	title: "KMD's Portfolio",
 	description: "UX Design student met een passie voor gebruiksvriendelijke digitale producten. In mijn projecten combineer ik gebruikersonderzoek, creatief denken en prototyping om betekenisvolle gebruikerservaringen te ontwerpen.",
+	openGraph: {
+		title: "KMD's Portfolio",
+		description: "UX Design student met een passie voor gebruiksvriendelijke digitale producten. In mijn projecten combineer ik gebruikersonderzoek, creatief denken en prototyping om betekenisvolle gebruikerservaringen te ontwerpen.",
+		type: "website",
+		locale: "nl_NL",
+	},
 };
 
 export default function RootLayout({
