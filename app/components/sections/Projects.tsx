@@ -202,7 +202,7 @@ export default function Projects() {
                 {projectsData.map((project) => (
                     <SwiperSlide
                         key={project.title}
-                        className="relative mt-58 md:mt-50 w-90! md:w-103! shrink-0"
+                        className="relative mt-58 md:mt-50 w-80! md:w-103! shrink-0"
 
                         onClick={() => handleProjectSlideClick(project as Project)}
                     >

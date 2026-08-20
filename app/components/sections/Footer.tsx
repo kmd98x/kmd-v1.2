@@ -110,12 +110,12 @@ export default function Footer() {
                     <div ref={contactInfoRef} className="flex flex-col sm:flex-row gap-6 sm:gap-20 mt-10 sm:items-center">
                         {contactInfo.map((item) => (
                             <div key={item.label} className='info-block flex gap-3 item-center'>
-                                <div className="w-20 h-20 rounded-full bg-[#231F1C] flex items-center justify-center">
+                                <div className="w-12 h-12 rounded-full bg-[#231F1C] flex items-center justify-center">
                                     {item.icon}
                                 </div>
                                 <div className='flex flex-col justify-center'>
                                     <p className='font-alegreya-sans'>{item.label}</p>
-                                    <a href={item.href} target={item.target} className='text-2xl font-alegreya-sans'>{item.value}</a>
+                                    <a href={item.href} target={item.target} className='text-lg font-alegreya-sans'>{item.value}</a>
                                 </div>
                             </div>
                         ))}
