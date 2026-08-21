@@ -31,10 +31,10 @@ a, p, ul, ol, li, span {
 }
 
 p {
-	font-size: clamp(1rem, 1.5vw + 1rem, 1.25rem);
+	font-size: clamp(0.875rem, 5.172vw - 0.224rem, 1.5rem);
 }
 
-.site-navigation a {
+.site-navigation a, .site-navigation-mobile a {
 	@apply font-bold uppercase tracking-[3.2px];
 	font-family: var(--font-alegreya-sans-sc);
 }

@@ -106,7 +106,7 @@ export default function Footer() {
                 </div>
                 <section className="max-w-341 h-auto md:h-145 w-full mx-auto flex flex-col justify-center pt-64 sm:pt-80 md:pt-0 px-6 sm:px-0">
                     <h2 ref={titleRef} className='text-4xl sm:text-5xl md:text-7xl font-montez'>Neem contact op</h2>
-                    <p ref={textRef} className='footer-text max-w-[70ch] text-base! sm:text-xl! md:text-2xl! font-alegreya-sans mt-6'>Zin om samen te werken of gewoon even hallo te zeggen? Stuur me dan gerust een bericht via onderstaand e-mailadres of LinkedIn.</p>
+                    <p ref={textRef} className='footer-text max-w-[70ch] text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]! font-alegreya-sans mt-6'>Zin om samen te werken of gewoon even hallo te zeggen? Stuur me dan gerust een bericht via onderstaand e-mailadres of LinkedIn.</p>
                     <div ref={contactInfoRef} className="flex flex-col sm:flex-row gap-6 sm:gap-20 mt-10 sm:items-center">
                         {contactInfo.map((item) => (
                             <div key={item.label} className='info-block flex gap-3 item-center'>
@@ -114,7 +114,7 @@ export default function Footer() {
                                     {item.icon}
                                 </div>
                                 <div className='flex flex-col justify-center'>
-                                    <p className='font-alegreya-sans'>{item.label}</p>
+                                    <p className='font-alegreya-sans text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!'>{item.label}</p>
                                     <a href={item.href} target={item.target} className='text-lg font-alegreya-sans'>{item.value}</a>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export default function Footer() {
                     </div>
                 </section>
                 <section>
-                    <p className='max-w-341 mx-auto md:my-auto text-center max-sm:mb-5 max-sm:mt-10 ms:my-10'>&copy; 2026 Martina Doekharan</p>
+                    <p className='max-w-341 mx-auto md:my-auto text-center max-sm:mb-5 max-sm:mt-10 ms:my-10 text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!'>&copy; 2026 Martina Doekharan</p>
                 </section>
             </section>
         </footer>

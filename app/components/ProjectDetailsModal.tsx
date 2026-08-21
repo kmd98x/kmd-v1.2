@@ -13,7 +13,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
     return (
         <div className="max-w-7xl mx-auto px-4 pt-20 overflow-y-auto z-50">
             <h3 className="font-montez text-7xl text-center">{project.title}</h3>
-            <p className="font-alegreya-sans text-center max-w-[90ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.25rem)] mt-5">{project.excerpt}</p>
+            <p className="font-alegreya-sans text-center max-w-[90ch] mx-auto text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]! mt-5">{project.excerpt}</p>
 
             <div className="flex flex-wrap gap-4 justify-center mt-4">
                 {project.tags.map((tag) => (
@@ -52,7 +52,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                             case "subtitle":
                             case "text":
                                 return (
-                                    <RichText key={index} text={content.value} className={twMerge("col-start-2 col-span-10 whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1.25rem)]!", content?.styles || "")} />
+                                    <RichText key={index} text={content.value} className={twMerge("col-start-2 col-span-10 whitespace-pre-line text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!", content?.styles || "")} />
                                 );
                             case "image":
                                 return (
@@ -81,7 +81,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                                 return (
                                     <div key={index} className={twMerge("border border-[#231F1C] bg-[#231F1C]/15 rounded-lg p-4", content?.blockStyles || "")}>
                                         <h5 className={twMerge("font-alegreya-sans text-2xl font-bold", content?.titleStyles || "")}>{content.title}</h5>
-                                        <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(1rem,1.5vw+1rem,1.25rem)]!", content?.textStyles || "")} />
+                                        <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!", content?.textStyles || "")} />
                                         {content.media && (
                                             <div className={twMerge("mt-4", content.media.styles || "")}>
                                                 {content.media.type === "image" && (
