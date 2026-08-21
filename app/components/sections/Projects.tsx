@@ -166,8 +166,8 @@ export default function Projects() {
 
             {projectsData.map((project, index) => (
                 <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full`}>
-                    <h3 className="project-title font-alegreya-sans-sc text-4xl text-center mb-4">{project.title}</h3>
-                    <p className="project-excerpt font-alegreya-sans text-center w-full md:max-w-[70ch] mx-auto text-[clamp(1rem,1.5vw+1rem,1.5rem)]!">{project.excerpt}</p>
+                    <h3 className="project-title font-alegreya-sans-sc text-4xl max-sm:text-2xl text-center mb-4">{project.title}</h3>
+                    <p className="project-excerpt font-alegreya-sans text-center w-full md:max-w-[70ch] mx-auto text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!">{project.excerpt}</p>
                 </div>
             ))}
 
@@ -202,7 +202,7 @@ export default function Projects() {
                 {projectsData.map((project) => (
                     <SwiperSlide
                         key={project.title}
-                        className="relative mt-58 md:mt-50 w-80! md:w-103! shrink-0"
+                        className="relative mt-58 md:mt-50 w-62.5! md:w-103! shrink-0"
 
                         onClick={() => handleProjectSlideClick(project as Project)}
                     >

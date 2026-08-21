@@ -32,7 +32,7 @@ export default function Header() {
         <section
             ref={container}
             data-scroll-section="hero"
-            className="relative z-20 h-screen min-h-144 w-screen"
+            className="relative z-20 h-screen min-h-144 w-screen pointer-events-none"
             id="home"
         >
             <div className="hero-pin h-screen min-h-144 w-screen flex items-center justify-center px-8">

@@ -122,7 +122,7 @@ export default function Footer() {
                     </div>
                 </section>
                 <section>
-                    <p className='max-w-341 mx-auto md:my-auto text-center my-10'>&copy; 2026 Martina Doekharan</p>
+                    <p className='max-w-341 mx-auto md:my-auto text-center max-sm:mb-5 max-sm:mt-10 ms:my-10'>&copy; 2026 Martina Doekharan</p>
                 </section>
             </section>
         </footer>

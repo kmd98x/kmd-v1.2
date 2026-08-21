@@ -50,7 +50,7 @@ export default function Navigation() {
         <header className="flex items-center justify-between fixed w-full px-6 sm:px-8 py-6 left-1/2 -translate-x-1/2 z-50">
             <Link
                 href="#home"
-                className={`inline-block z-50 transition-opacity ${showLogo ? 'opacity-100 y-0' : 'opacity-0 -y-10'}`}
+                className={`inline-block z-50 transition-opacity ${showLogo ? 'opacity-100 max-sm:opacity-0 y-0' : 'opacity-0 -y-10'}`}
                 onClick={(e) => scrollToSection(e, 'home')}
             >
                 <Logo />
