@@ -2,6 +2,7 @@ import { Project } from "@/types/project";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import RichText from "./global/RichText";
+import TabDropdown from "./global/TabDropdown";
 
 interface ProjectDetailsModalProps {
     project: Project;
@@ -12,7 +13,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
 
     return (
         <div className="max-w-7xl mx-auto px-4 pt-20 overflow-y-auto z-50">
-            <h3 className="font-montez text-7xl text-center">{project.title}</h3>
+            <h3 className="font-montez text-4xl text-center">{project.title}</h3>
             <p className="font-alegreya-sans text-center max-w-[90ch] mx-auto text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]! mt-5">{project.excerpt}</p>
 
             <div className="flex flex-wrap gap-4 justify-center mt-4">
@@ -31,11 +32,15 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
             </div>
 
             <div className="mt-4 pb-20">
-                <div className="flex max-md:overflow-x-auto md:justify-center items-center p-4 border-b border-[#231F1C]">
+                <div className="min-[687px]:hidden p-4 border-b border-[#231F1C]">
+                    <TabDropdown tabs={project.tabs} activeTab={activeTab} onChange={setActiveTab} />
+                </div>
+
+                <div className="hidden min-[687px]:flex justify-center items-center p-4 border-b border-[#231F1C]">
                     {project.tabs.map((tab) => (
                         <h4
                             key={tab.title}
-                            className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-2xl whitespace-nowrap
+                            className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-lg whitespace-nowrap
                                 ${activeTab === tab.title ? 'rounded-lg bg-[#231F1C]/50 scale-105' : ''} cursor-pointer`}
                             onClick={(e) => {
                                 setActiveTab(tab.title);
@@ -79,8 +84,8 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
 
                             case "title-text":
                                 return (
-                                    <div key={index} className={twMerge("border border-[#231F1C] bg-[#231F1C]/15 rounded-lg p-4", content?.blockStyles || "")}>
-                                        <h5 className={twMerge("font-alegreya-sans text-2xl font-bold", content?.titleStyles || "")}>{content.title}</h5>
+                                    <div key={index} className={twMerge("border border-[#231F1C]/50 bg-[#231F1C]/10 rounded-lg p-4", content?.blockStyles || "")}>
+                                        <h5 className={twMerge("font-alegreya-sans-sc text-xl font-bold", content?.titleStyles || "")}>{content.title}</h5>
                                         <RichText text={content.text} className={twMerge("whitespace-pre-line text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!", content?.textStyles || "")} />
                                         {content.media && (
                                             <div className={twMerge("mt-4", content.media.styles || "")}>

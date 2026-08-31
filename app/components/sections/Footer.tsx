@@ -99,7 +99,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className={`relative pt-24`} id="contact">
+        <footer className={`relative pt-0 md:pt-24 max-md:-mt-24`} id="contact">
             <section ref={footerRef} className="h-auto relative w-screen">
                 <div ref={imageRef} className={`h-56 w-full sm:h-120 md:h-158 md:w-225.5 absolute top-0 right-0`}>
                     <Image src="/footer-foto.png" alt="Logo" width={1102} height={812} className="w-full h-full object-cover" />
@@ -109,13 +109,13 @@ export default function Footer() {
                     <p ref={textRef} className='footer-text max-w-[70ch] text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]! font-alegreya-sans mt-6'>Zin om samen te werken of gewoon even hallo te zeggen? Stuur me dan gerust een bericht via onderstaand e-mailadres of LinkedIn.</p>
                     <div ref={contactInfoRef} className="flex flex-col sm:flex-row gap-6 sm:gap-20 mt-10 sm:items-center">
                         {contactInfo.map((item) => (
-                            <div key={item.label} className='info-block flex gap-3 item-center'>
-                                <div className="w-12 h-12 rounded-full bg-[#231F1C] flex items-center justify-center">
+                            <div key={item.label} className='info-block flex gap-5 item-center'>
+                                <div className="w-16 h-16 rounded-full bg-[#231F1C] flex items-center justify-center">
                                     {item.icon}
                                 </div>
                                 <div className='flex flex-col justify-center'>
-                                    <p className='font-alegreya-sans text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]!'>{item.label}</p>
-                                    <a href={item.href} target={item.target} className='text-lg font-alegreya-sans'>{item.value}</a>
+                                    <h4 className='font-alegreya-sans block text-lg md:text-3xl'>{item.label}</h4>
+                                    <a href={item.href} target={item.target} className='text-lg md:text-2xl font-alegreya-sans'>{item.value}</a>
                                 </div>
                             </div>
                         ))}

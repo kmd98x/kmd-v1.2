@@ -93,8 +93,8 @@ export default function Projects() {
                 return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-50% top",
-                        end: "-20% top",
+                        start: "-60% top",
+                        end: "-30% top",
                         scrub: true,
                     },
                     y: 50,
@@ -112,8 +112,8 @@ export default function Projects() {
                 return gsap.from(self.lines, {
                     scrollTrigger: {
                         trigger: section.current,
-                        start: "-40% top",
-                        end: "-20% top",
+                        start: "-50% top",
+                        end: "-30% top",
                         scrub: true,
                     },
                     y: 50,
@@ -162,7 +162,7 @@ export default function Projects() {
                 {selectedProject && <ProjectDetailsModal project={selectedProject} />}
             </div>
 
-            <Title className="section-title absolute top-0 left-0 mt-[-16vh]">Mijn projecten</Title>
+            <Title className="section-title absolute top-0 left-0 mt-[-8vh] md:mt-[-20vh]">Mijn projecten</Title>
 
             {projectsData.map((project, index) => (
                 <div key={project.title} data-id={index} className={`${currentSlide === index ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-1000 ease-in-out absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full`}>
