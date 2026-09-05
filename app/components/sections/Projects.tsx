@@ -157,7 +157,7 @@ export default function Projects() {
             >
 
                 <button className={`fixed top-32 right-8 z-50 cursor-pointer transition duration-700 ${isModalOpen ? 'opacity-100' : 'opacity-0'}`} onClick={() => setIsModalOpen(false)}>
-                    <Close />
+                    <Close className="w-4.5 h-4.5 sm:w-6.25 sm:h-6.25" />
                 </button>
 
                 {selectedProject && <ProjectDetailsModal project={selectedProject} />}
