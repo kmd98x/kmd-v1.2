@@ -13,12 +13,13 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
 
     return (
         <div className="max-w-7xl mx-auto px-4 pt-20 overflow-y-auto z-50">
+            
             <h3 className="font-montez text-4xl text-center">{project.title}</h3>
             <p className="font-alegreya-sans text-center max-w-[90ch] mx-auto text-[clamp(0.875rem,5.172vw-0.224rem,1.5rem)]! mt-5">{project.excerpt}</p>
 
             <div className="flex flex-wrap gap-4 justify-center mt-4">
                 {project.tags.map((tag) => (
-                    <span key={tag} className="font-alegreya-sans text-lg bg-[#231F1C]/50 px-4 py-2 rounded-lg">{tag}</span>
+                    <span key={tag} className="font-alegreya-sans text-xl bg-[#231F1C]/50 px-4 py-2 rounded-lg">{tag}</span>
                 ))}
             </div>
 
@@ -40,7 +41,7 @@ export default function ProjectDetailsModal({ project }: ProjectDetailsModalProp
                     {project.tabs.map((tab) => (
                         <h4
                             key={tab.title}
-                            className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-lg whitespace-nowrap
+                            className={`font-alegreya-sans-sc hover:scale-105 px-8 py-3 transition-all duration-300 text-2xl whitespace-nowrap
                                 ${activeTab === tab.title ? 'rounded-lg bg-[#231F1C]/50 scale-105' : ''} cursor-pointer`}
                             onClick={(e) => {
                                 setActiveTab(tab.title);

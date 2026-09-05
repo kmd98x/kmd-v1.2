@@ -155,7 +155,8 @@ export default function Projects() {
                     }
                 }}
             >
-                <button className="absolute top-8 right-8 z-50 cursor-pointer" onClick={() => setIsModalOpen(false)}>
+
+                <button className={`fixed top-32 right-8 z-50 cursor-pointer transition duration-700 ${isModalOpen ? 'opacity-100' : 'opacity-0'}`} onClick={() => setIsModalOpen(false)}>
                     <Close />
                 </button>
 
